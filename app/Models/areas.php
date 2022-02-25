@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class areas extends Model
 {
     use HasFactory;
+    protected $table = 'areas';
+    protected $primaryKey = 'id';
+    protected $fillable = [
+        'nombre'
+    ];
 }
