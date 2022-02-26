@@ -21,7 +21,7 @@ Route::get('/', function () {
 //Route::get('/', function () {return view('dashboard');})->name('dashboard');
 
 // Vistas
-Route::get('/dashboard', function () {return view('dashboard');})->name('dashboard');
+//Route::get('/', function () {return view('dashboard');})->name('dashboard');
 Route::get('/login', function () {return view('auth.login');})->name('login');
 Route::get('/register', function () {return view('auth.register');})->name('register');
 Route::get('/home', function () {return view('home');})->name('home');
@@ -34,7 +34,7 @@ Route::get('/notifications', function () {return view('pages.notifications');})-
 Route::get('/language', function () {return view('pages.language');})->name('language');
 
 //UserController
-Route::get('/user.index', [App\Http\Controllers\UserController::class, 'index'])->name('user.index');
+Route::get('/', [App\Http\Controllers\UserController::class, 'index'])->name('user.index');
 
 // Logout
 Route::get('/exit', function () {"saliste";})->name('logout');
