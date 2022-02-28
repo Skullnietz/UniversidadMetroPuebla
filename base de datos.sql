@@ -71,7 +71,7 @@ CREATE TABlE usuarios_admin (
   FOREIGN KEY (idArea) REFERENCES areas(id)
 );
 -- ? ---------------------------------------------------------------------
--- ! Faltan las ultimas columnas de la tabla
+-- * Listo para ejecutar
 CREATE TABlE usuarios_operativos (
   id BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   matricula VARCHAR(20) NOT NULL,
@@ -82,12 +82,13 @@ CREATE TABlE usuarios_operativos (
   idTipoUsuario BIGINT NOT NULL,
   sexo VARCHAR(10) NOT NULL,
   activo boolean NOT NULL DEFAULT 1,
+  foto VARCHAR(255),
   created_at DATE NOT NULL,
   updated_at DATE,
   FOREIGN KEY (idTipoUsuario) REFERENCES tipos_usuario(id)
 );
 -- ? ---------------------------------------------------------------------
--- ! Falta el la tabla de usuarios operativos
+-- * Listo para ejecutar
 CREATE TABlE alumnos_carreras (
   id BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   idUsuarioOperativo BIGINT NOT NULL,
