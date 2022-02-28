@@ -21,7 +21,7 @@ Route::get('/', function () {
 //Route::get('/', function () {return view('dashboard');})->name('dashboard');
 
 // Vistas
-//Route::get('/', function () {return view('dashboard');})->name('dashboard');
+Route::get('/dashboard', function () {return view('dashboard');})->name('dashboard');
 Route::get('/login', function () {return view('auth.login');})->name('login');
 Route::get('/register', function () {return view('auth.register');})->name('register');
 Route::get('/home', function () {return view('home');})->name('home');

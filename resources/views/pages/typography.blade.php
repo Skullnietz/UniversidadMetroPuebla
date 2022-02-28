@@ -1,5 +1,13 @@
-@extends('layouts.app', ['activePage' => 'typography', 'titlePage' => __('Typography')])
-
+@extends('sidebar')
+@section('title')
+Gestor de Usuarios
+@endsection
+@section('sidebartitle')
+Gestor de Usuarios
+@endsection
+@section('itemtypography')
+active
+@endsection
 @section('content')
 <div class="content">
   <div class="container-fluid">

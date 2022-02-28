@@ -1,5 +1,13 @@
-@extends('layouts.app', ['activePage' => 'dashboard', 'titlePage' => __('Dashboard')])
-
+@extends('sidebar')
+@section('title')
+Gestor de Usuarios
+@endsection
+@section('sidebartitle')
+Gestor de Usuarios
+@endsection
+@section('itemdashboard')
+active
+@endsection
 @section('content')
   <div class="content">
     <div class="container-fluid">

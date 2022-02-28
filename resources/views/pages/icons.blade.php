@@ -1,5 +1,13 @@
-@extends('layouts.app', ['activePage' => 'icons', 'titlePage' => __('Icons')])
-
+@extends('sidebar')
+@section('title')
+Iconos
+@endsection
+@section('sidebartitle')
+Iconos
+@endsection
+@section('itemicons')
+active
+@endsection
 @section('content')
 <div class="content">
   <div class="container-fluid">
