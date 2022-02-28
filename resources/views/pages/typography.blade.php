@@ -1,9 +1,9 @@
 @extends('sidebar')
 @section('title')
-Gestor de Usuarios
+Tipografia
 @endsection
 @section('sidebartitle')
-Gestor de Usuarios
+Tipografia
 @endsection
 @section('itemtypography')
 active

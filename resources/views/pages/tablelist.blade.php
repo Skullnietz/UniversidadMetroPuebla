@@ -1,9 +1,9 @@
 @extends('sidebar')
 @section('title')
-Gestor de Usuarios
+Tablas
 @endsection
 @section('sidebartitle')
-Gestor de Usuarios
+Tablas
 @endsection
 @section('itemtablelist')
 active

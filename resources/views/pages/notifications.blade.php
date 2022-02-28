@@ -1,9 +1,9 @@
 @extends('sidebar')
 @section('title')
-Gestor de Usuarios
+Notificaciones
 @endsection
 @section('sidebartitle')
-Gestor de Usuarios
+Notificaciones
 @endsection
 @section('itemnotificarions')
 active
