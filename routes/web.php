@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +12,29 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+//Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
+//Route::get('/', function () {return view('dashboard');})->name('dashboard');
+
+// Vistas
+//Route::get('/', function () {return view('dashboard');})->name('dashboard');
+Route::get('/login', function () {return view('auth.login');})->name('login');
+Route::get('/register', function () {return view('auth.register');})->name('register');
+Route::get('/home', function () {return view('home');})->name('home');
+Route::get('/profile.edit', function () {return view('profile.edit');})->name('profile.edit');
+Route::get('/table', function () {return view('pages.tablelist');})->name('table');
+Route::get('/typography', function () {return view('pages.typography');})->name('typography');
+Route::get('/icons', function () {return view('pages.icons');})->name('icons');
+Route::get('/map', function () {return view('pages.map');})->name('map');
+Route::get('/notifications', function () {return view('pages.notifications');})->name('notifications');
+Route::get('/language', function () {return view('pages.language');})->name('language');
+
+//UserController
+Route::get('/', [App\Http\Controllers\UserController::class, 'index'])->name('user.index');
+
+// Logout
+Route::get('/exit', function () {"saliste";})->name('logout');
