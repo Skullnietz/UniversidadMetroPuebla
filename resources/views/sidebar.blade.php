@@ -91,7 +91,7 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
-                      <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i>
+                      <i class="material-icons">people_alt</i>
                       <p>{{ __('Usuarios') }}
                         <b class="caret"></b>
                       </p>
@@ -100,13 +100,13 @@
                       <ul class="nav">
                         <li class="nav-item @yield('itemuseredit')">
                           <a class="nav-link" href="{{ route('profile.edit') }}">
-                            <span class="sidebar-mini"> UP </span>
+                            <span class="sidebar-mini"> PU </span>
                             <span class="sidebar-normal">{{ __('Perfil Usuario') }} </span>
                           </a>
                         </li>
                         <li class="nav-item @yield('itemuserindex')">
                           <a class="nav-link" href="{{ route('user.index') }}">
-                            <span class="sidebar-mini"> UM </span>
+                            <span class="sidebar-mini"> GU </span>
                             <span class="sidebar-normal"> {{ __('Gestor Usuarios') }} </span>
                           </a>
                         </li>
