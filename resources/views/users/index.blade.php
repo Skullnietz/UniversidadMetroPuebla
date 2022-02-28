@@ -113,9 +113,9 @@
                     </div>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{ route('table') }}">
+                    <a class="nav-link" href="{{ route('usuarios') }}">
                       <i class="material-icons">content_paste</i>
-                        <p>{{ __('Table List') }}</p>
+                        <p>{{ __('Usuarios') }}</p>
                     </a>
                   </li>
                   <li class="nav-item">

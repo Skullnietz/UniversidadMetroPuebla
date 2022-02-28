@@ -38,3 +38,6 @@ Route::get('/', [App\Http\Controllers\UserController::class, 'index'])->name('us
 
 // Logout
 Route::get('/exit', function () {"saliste";})->name('logout');
+
+//-------------------Catalogos----------------------------------
+Route::get('/usuarios', function () {return view('layouts.catalogos.usuariosOp');})->name('usuarios');
