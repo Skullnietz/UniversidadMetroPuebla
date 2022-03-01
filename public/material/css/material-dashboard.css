@@ -12095,7 +12095,10 @@ fieldset[disabled][disabled] .has-warning .form-control,
   background-color: rgba(255, 152, 0, 0.8);
   border-radius: .2rem;
 }
-
+.checkbtn{
+  margin-right: 40px;
+  margin-top: 20px;
+}
 .was-validated .has-warning .is-focused .form-control:valid,
 .has-warning .is-focused .form-control.is-valid,
 .was-validated .has-warning .is-focused .custom-select:valid,

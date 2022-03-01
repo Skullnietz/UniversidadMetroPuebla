@@ -32,6 +32,8 @@ Route::get('/icons', function () {return view('pages.icons');})->name('icons');
 Route::get('/map', function () {return view('pages.map');})->name('map');
 Route::get('/notifications', function () {return view('pages.notifications');})->name('notifications');
 Route::get('/language', function () {return view('pages.language');})->name('language');
+Route::get('/formulario', function () {return view('pages.formulario');})->name('formulario');
+Route::get('/profile.update', function () {return view('profile.edit');})->name('profile.update');
 
 //UserController
 Route::get('/users.edit', [App\Http\Controllers\UserController::class, 'index'])->name('user.index');

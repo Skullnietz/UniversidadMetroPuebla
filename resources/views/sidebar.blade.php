@@ -137,6 +137,12 @@
                       <p>{{ __('Notificaciones') }}</p>
                     </a>
                   </li>
+                  <li class="nav-item @yield('itemformulario')">
+                    <a class="nav-link" href="{{ route('formulario') }}">
+                      <i class="material-icons">list_alt</i>
+                      <p>{{ __('Formularios') }}</p>
+                    </a>
+                  </li>
                   
                   
                 </ul>
@@ -370,6 +376,8 @@
         <!-- Material Dashboard DEMO methods, don't include it in your project! -->
         <script src="{{ asset('material') }}/demo/demo.js"></script>
         <script src="{{ asset('material') }}/js/settings.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <script>
           // Facebook Pixel Code Don't Delete
             ! function(f, b, e, v, n, t, s) {
