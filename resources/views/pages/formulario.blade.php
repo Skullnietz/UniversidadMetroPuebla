@@ -37,7 +37,7 @@ active
                       </div>
                     @endif
                     <div class="row">
-                      <label class="col-sm-2 col-form-label">{{ __('Nombre') }}</label>
+                      <label class="col-sm-2 col-form-label"><b style="color:#545454">{{ __('Nombre') }}</b></label>
                       <div class="col-sm-7">
                         <div class="bmd-form-group is-filled">
                             <div class="input-group">
@@ -52,7 +52,7 @@ active
                       </div>
                     </div>
                     <div class="row">
-                      <label class="col-sm-2 col-form-label">{{ __('Email') }}</label>
+                      <label class="col-sm-2 col-form-label"><b style="color:#545454">{{ __('Email') }}</b></label>
                       <div class="col-sm-7">
                         <div class="bmd-form-group is-filled">
                             <div class="input-group">
@@ -67,7 +67,7 @@ active
                       </div>
                     </div>
                     <div class="row">
-                        <label class="col-sm-2 col-form-label">{{ __('Telefono') }}</label>
+                        <label class="col-sm-2 col-form-label"><b style="color:#545454">{{ __('Telefono') }}</b></label>
                         <div class="col-sm-7">
                           <div class="bmd-form-group is-filled">
                               <div class="input-group">
@@ -82,7 +82,7 @@ active
                         </div>
                       </div><br><hr>
                       <div class="row">
-                        <label class="col-sm-2 col-form-label">{{ __('Select 2 Jquery') }}</label>
+                        <label class="col-sm-2 col-form-label"><b style="color:#545454">{{ __('Select 2 Jquery') }}</b></label>
                         <div class="col-sm-5">
                           <select name="" id="" class="form-control selectdinamico">
                               <option value="">Seleccionar un valor</option>
@@ -93,7 +93,7 @@ active
                         </div>
                       </div><br><hr>
                       <div class="row">
-                        <label class="col-sm-2 col-form-label">{{ __('Checkbox Opcion Multiple') }}</label>
+                        <label class="col-sm-2 col-form-label"><b style="color:#545454">{{ __('Checkbox Opcion Multiple') }}</b>
                         <div class="col-sm-7">
                           
                             <div class="form-check">
@@ -101,20 +101,20 @@ active
                                   <input class="form-check-input" type="checkbox" value="Opcion 1"  name="checkbox">
                                   <span class="form-check-sign">
                                     <span class="check"></span>
-                                  </span>Opcion 1
+                                  </span><b style="color:#545454"">Opcion 1</b>
                                 </label>
                                 <label class="form-check-label checkbtn">
                                     <input class="form-check-input" type="checkbox" value="Opcion 2"  name="checkbox">
                                     <span class="form-check-sign">
                                       <span class="check"></span>
-                                    </span>Opcion 2
+                                    </span><b style="color:#545454"">Opcion 2</b>
                                   </label>
                                   <label class="form-check-label checkbtn">
                                     <input class="form-check-input" type="checkbox" value="Opcion 3"  name="checkbox">
                                     <span class="form-check-sign">
                                       <span class="check"></span>
                                       <!-- style="color:#545454" -->
-                                    </span>Opcion 3
+                                    </span><b style="color:#545454">Opcion 3</b>
                                   </label>
                               </div>
                               
