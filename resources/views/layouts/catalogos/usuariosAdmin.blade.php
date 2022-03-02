@@ -1,7 +1,9 @@
 
 @extends('layouts.app', ['activePage' => 'usuariosOp', 'titlePage' => __('Usuarios Operativos')])
 @section('content')
-
+    <script type="text/javascript" src="js/d3.v3.min.js"></script>
+    <script type="text/javascript" src="js/utilities.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
 <div class="content"><br><br>
   <div class="container-fluid">
@@ -14,9 +16,6 @@
           </div>
           <div class="card-body">
             <head>
-              <title>ZingGrid: Docs Getting Started</title>
-              <!--Script Reference[1]-->
-              <script nonce="undefined" src="https://cdn.zinggrid.com/zinggrid.min.js"></script>
               <style>
                 html,
                 body {
@@ -33,21 +32,25 @@
             </head>
             
             <body>
-              <!--Grid Component Placement[2]-->
-
                <meta name="csrf-token" content="{{ csrf_token() }}">
               <zing-grid 
-                      id='usuarios'
+                      id='usuario'
+                      editor-controls="all"
                       filter
+                      pager
+                      page-size=5
+                      page-size-options='1,5,10,15,20'
                       theme='ios'
                       context-menu
                       columns-controls
+                      layout-controls
+                      lang="es"
+                      src="https://cdn.zinggrid.com/datasets/remote-data.json"
                   >
                   <zg-colgroup>
                       <zg-column 
                           index='a'  
                           type='text' 
-                          filter='disabled'
                           header='Nombre'
                       ></zg-column>
                       <zg-column 
@@ -57,13 +60,15 @@
                       ></zg-column>
                       <zg-column 
                           index='c'  
-                          type='text' 
+                          type='mail' 
+                          filter='disable'
                           header='Correo'
                       ></zg-column>
                       <zg-column 
                           index='d'  
                           type='text' 
-                          header='Tipo de Usuario'
+                          filter='disable'
+                          header='Titulo'
                       ></zg-column>
                       <zg-column 
                           index='e'  
@@ -73,7 +78,6 @@
                       ></zg-column>
                   </zg-colgroup>
               </zing-grid> 
-              
             </body>
           </div>
         </div>
@@ -81,5 +85,15 @@
     </div>
   </div>
 </div>
- 
+<script src='https://cdn.zinggrid.com/zinggrid.min.js' defer></script>
+<script>
+  $(document).ready(() => {
+    window.onload = function(){
+      document.querySelector('#usuario').data = @json($consulta);
+      
+    }
+    const zgRef1 = document.querySelector('#usuarios');
+  });
+</script>
+
 @endsection

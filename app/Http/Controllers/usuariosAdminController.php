@@ -8,7 +8,7 @@ use App\Models\usuarios_admin;
 
 class usuariosAdminController extends Controller
 {
-    public function usuarios(){
+    public function admin(){
         $query = \DB::table('usuarios_admin')
         ->select('id',
         'titulo',
@@ -18,21 +18,21 @@ class usuariosAdminController extends Controller
         DB::raw('IF(activo = "1", "Activo", "No activo") AS activo'))
         ->get();
         
-        $consultaUsuario = $this->json($query);
+        $consulta = $this->json($query);
 
-        return view('usuariosOp', compact('consultaUsuario'));
+        return view('layouts.catalogos.usuariosAdmin', compact('consulta'));
     }
 
     public function json($query){
         $consult = array();
         foreach($query as $value){
             array_push($consult, array(
-                'id' => $value -> id,
-                'a'  => $value -> nombre,
-                'b'  => $value -> ap_paterno,
-                'c'  => $value -> email,
-                'd'  => $value -> titulo,
-                'e'  => $value -> activo,  
+                'id' => $value->id,
+                'a'  => $value->nombre,
+                'b'  => $value->ap_paterno,
+                'c'  => $value->email,
+                'd'  => $value->titulo,
+                'e'  => $value->activo,  
             ));
         }
         return $consult;
