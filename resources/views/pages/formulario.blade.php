@@ -93,7 +93,7 @@ active
                         </div>
                       </div><br><hr>
                       <div class="row">
-                        <label class="col-sm-2 col-form-label"><b style="color:#545454">{{ __('Checkbox Opcion Multiple') }}</b>
+                        <label class="col-sm-5 col-form-label"><b style="color:#545454">{{ __('Checkbox Opcion Multiple') }}</b>
                         <div class="col-sm-7">
                           
                             <div class="form-check">
@@ -122,7 +122,7 @@ active
                       </div>
                   </div>
                   <div class="card-footer ml-auto mr-auto">
-                    <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+                    <button type="submit" class="btn btn-primary beforeguardar">{{ __('Guardar') }}</button>
                   </div>
                 </div>
               </form>
@@ -131,6 +131,14 @@ active
         <script>
         $(document).ready(function() {
             $('.selectdinamico').select2();
+            $('.beforeguardar').click(function() {
+              Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: 'El registro se ha guardado sactisfactoriamente',
+              showConfirmButton: false,
+              timer: 1500
+            })
         });
         </script>
         @endpush

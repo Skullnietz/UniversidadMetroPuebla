@@ -34,6 +34,7 @@ Route::get('/notifications', function () {return view('pages.notifications');})-
 Route::get('/language', function () {return view('pages.language');})->name('language');
 Route::get('/formulario', function () {return view('pages.formulario');})->name('formulario');
 Route::get('/profile.update', function () {return view('profile.edit');})->name('profile.update');
+Route::get('/profile.password', function () {return view('profile.edit');})->name('profile.password');
 
 //UserController
 Route::get('/users.edit', [App\Http\Controllers\UserController::class, 'index'])->name('user.index');
