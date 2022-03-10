@@ -40,3 +40,7 @@ Route::get('/users.edit', [App\Http\Controllers\UserController::class, 'index'])
 
 // Logout
 Route::get('/exit', function () {"saliste";})->name('logout');
+
+//-------------------Catalogos----------------------------------
+//-------------------Usuarios Admin------------------------------
+Route::get('/usuarios','App\Http\Controllers\usuariosAdminController@admin')->name('usuarios');
