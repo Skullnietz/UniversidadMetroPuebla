@@ -4,6 +4,7 @@
     <script type="text/javascript" src="js/d3.v3.min.js"></script>
     <script type="text/javascript" src="js/utilities.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <div class="content"><br><br>
   <div class="container-fluid">
@@ -12,7 +13,7 @@
         <div class="card">
           <div class="card-header card-header-primary">
             <h4 class="card-title ">Administradores</h4>
-            <p class="card-category">Administradores registrados y activos</p>
+            <p class="card-category"><button id='getDataG' class='btn btn-sm btn-success'>Agregar Usuario</button></p>
           </div>
           <div class="card-body">
             <head>
@@ -35,18 +36,13 @@
                <meta name="csrf-token" content="{{ csrf_token() }}">
               <zing-grid 
                       id='usuario'
-                      editor-controls="all"
                       filter
                       pager
                       page-size=5
                       page-size-options='1,5,10,15,20'
                       theme='ios'
-                      context-menu
-                      columns-controls
-                      layout-controls
                       lang="es"
-                      src="https://cdn.zinggrid.com/datasets/remote-data.json"
-                  >
+                      src="https://cdn.zinggrid.com/datasets/remote-data.json">
                   <zg-colgroup>
                       <zg-column 
                           index='a'  
@@ -76,6 +72,11 @@
                           filter='disabled'
                           header='Status'
                       ></zg-column>
+                      <!-- <zg-column
+                          index='f'  
+                          header='Opciones'
+                          filter='disabled'
+                      ></zg-column> -->
                   </zg-colgroup>
               </zing-grid> 
             </body>
@@ -92,8 +93,10 @@
       document.querySelector('#usuario').data = @json($consulta);
       
     }
-    const zgRef1 = document.querySelector('#usuarios');
+    const zgRef = document.querySelector('#usuarios');
+   
   });
 </script>
+
 
 @endsection
