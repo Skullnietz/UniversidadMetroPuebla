@@ -365,6 +365,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
         <!-- Library for adding dinamically elements -->
         <script src="{{ asset('material') }}/js/plugins/arrive.min.js"></script>
+        <!-- Sweet alert 2 -->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <!--  Google Maps Plugin    -->
         <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE'"></script>
         <!-- Chartist JS -->
