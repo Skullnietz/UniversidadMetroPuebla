@@ -29,13 +29,13 @@ class usuariosAdminController extends Controller
         function options( $value, $value2 ){
             $parameter= Crypt::encrypt($value2);
 
-            if($value=='1'){
+            if($value=='Activo'){
                 
-                $btn = "<a href='".url("")."' type='submit' class='btn btn-xs btn-danger'><i class='ace-icon fa fa-trash-o bigger-120'> Eliminar</i></a><br>".
-                        "<a href='".url("")."' type='submit' class='btn btn-xs btn-info'><i class='ace-icon fa fa-pencil bigger-120'> Editar</i></a><br>".
-                        "<a href='".url("")."' type='submit' class='btn btn-xs btn-warning'><i class='ace-icon fa fa-download bigger-120'> Descargar PDF</i></a><br>";
+                $btn =  "<a href='".url("")."' type='submit' class='btn btn-sm btn-info'><i class='ace-icon fa fa-pencil-square-o bigger-120'></i></a>".
+                        "<a href='".url("")."' type='submit' class='btn btn-sm btn-danger'><i class='ace-icon fa fa-trash-o bigger-120'></i></a>";
+                        
             }else{
-                $btn = "<a href=".url("/restaurarOrden/{$value2}")." type='submit' class='btn btn-xs btn-warning'>Restaurar</a>";
+                $btn = "<a href=".url("/restaurarOrden/{$value2}")." type='submit' class='btn btn-sm btn-warning'><i class='ace-icon fa fa-repeat bigger-120'> Restaurar</i></a>";
             }
             
             return $btn;
@@ -55,5 +55,9 @@ class usuariosAdminController extends Controller
             ));
         }
         return $consult;
+    }
+
+    public function Guardar(){
+
     }
 }
